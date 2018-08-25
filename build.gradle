@@ -10,6 +10,20 @@ buildscript {
                 targetSdkVersion : 28,
                 minSdkVersion    : 17,
         ]
+
+        //=== App Version generator ===
+        app_ver = [
+                major : 0,
+                minor : 0,
+                patch : 0,
+                build : 1
+        ]
+
+        version_code = app_ver.major * 1000000 + app_ver.minor * 10000 + app_ver.patch * 100 + app_ver.build
+        version_name = "${app_ver.major}.${app_ver.minor}.${app_ver.patch}"
+
+
+
     }
 
 

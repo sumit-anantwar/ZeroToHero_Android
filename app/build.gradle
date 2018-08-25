@@ -11,8 +11,9 @@ android {
         applicationId build_config.package
         minSdkVersion build_config.minSdkVersion
         targetSdkVersion build_config.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode version_code
+        versionName version_name
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
