@@ -5,15 +5,18 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion build_config.compileSdkVersion
+
     defaultConfig {
-        applicationId "com.sumitanantwar.zerotohero_android"
-        minSdkVersion 17
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        applicationId build_config.package
+        minSdkVersion build_config.minSdkVersion
+        targetSdkVersion build_config.targetSdkVersion
+        versionCode version_code
+        versionName version_name
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,9 +27,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    // Kotlin
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:${dependency.kotlin}"
+
+    // Android Support
+    implementation "com.android.support:appcompat-v7:${dependency.support}"
+    implementation "com.android.support.constraint:constraint-layout:${dependency.constraint_layout}"
+
+    // Tests
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

@@ -1,14 +1,44 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.61'
+
+    ext {
+        //=== Build Config ===
+        build_config = [
+                package          : "com.sumitanantwar.zerotohero_android",
+                compileSdkVersion: 27,
+                targetSdkVersion : 27,
+                minSdkVersion    : 17,
+        ]
+
+        //=== App Version generator ===
+        app_ver = [
+                major : 0,
+                minor : 0,
+                patch : 0,
+                build : 1
+        ]
+
+        version_code = app_ver.major * 1000000 + app_ver.minor * 10000 + app_ver.patch * 100 + app_ver.build
+        version_name = "${app_ver.major}.${app_ver.minor}.${app_ver.patch}"
+
+        //=== Dependency Versions ===
+        dependency = [
+                kotlin              : "1.2.61",
+                support             : "27.1.1",
+                constraint_layout   : "1.1.2"
+        ]
+
+
+    }
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${dependency.kotlin}"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
