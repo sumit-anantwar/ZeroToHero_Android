@@ -26,7 +26,8 @@ buildscript {
         dependency = [
                 kotlin              : "1.2.61",
                 support             : "27.1.1",
-                constraint_layout   : "1.1.2"
+                constraint_layout   : "1.1.2",
+                timber              : "4.6.0"
         ]
 
 

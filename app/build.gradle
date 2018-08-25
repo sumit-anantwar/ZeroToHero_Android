@@ -35,6 +35,9 @@ dependencies {
     implementation "com.android.support:appcompat-v7:${dependency.support}"
     implementation "com.android.support.constraint:constraint-layout:${dependency.constraint_layout}"
 
+    // Timber
+    implementation "com.jakewharton.timber:timber:${dependency.timber}"
+
     // Tests
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
