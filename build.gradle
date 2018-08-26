@@ -5,7 +5,7 @@ buildscript {
     ext {
         //=== Build Config ===
         build_config = [
-                package          : "com.sumitanantwar.zerotohero_android",
+                package          : "com.sumitanantwar.cc_player",
                 compileSdkVersion: 27,
                 targetSdkVersion : 27,
                 minSdkVersion    : 17,
