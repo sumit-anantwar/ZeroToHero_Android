@@ -18,6 +18,3 @@ I will try my best to keep the commit history as "step-by-step" as possible, and
 4. **TDD:** Remember those geeky seniors? You need the confidence to face them! TDD will give you that exact confidence. With TDD's "rapid response cycles" you can be totally sure that your code works. And when you optimize or update any part of the code, TDD will give you an immediate feedback about the impact of that change.
 **Spoiler Alert: TDD is addictive! Once you become a TDDer, it would be impossible to look back!**
 5. **Rx:** Although you can develop a maintainable and scalable app without it, Rx is like a cherry topping which makes every dessert complete! And yes, functional reactive programming is the future. So, I would strongly recommend you to go ahead and eat the dessert.
-
-### To the Experts:
-No matter how much we know, there is always more to learn. And, I am sure there would be enough room for improvement in all the approaches that I have tried to cover in this app. Please be candid enough to slap it on my face. I would heartily accept them!
